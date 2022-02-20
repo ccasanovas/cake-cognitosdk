@@ -6,9 +6,9 @@ Este plugin contiene utilidades para crear y deployar más fácilmente aplicacio
 
 ## Changelog
 
-Fecha: 2020-08-31
+Fecha: 2022-08-31
 
-* Cambios codigo deprecado para CakePHP 3.8.*
+* Cambios codigo deprecado para CakePHP 3.8.* actualización a 4.3.*
 
 Fecha: 2019-04-15
 
@@ -43,8 +43,8 @@ Fecha: 2018-10-10
 
 Para obtener el plugin con **composer** se requiere agregar a `composer.json` lo siguiente:
 
-1. Al objeto `"require"`, agregar el plugin: `"evil-corp/cakephp-awsapigateway": "dev-master"`
-2. Al arreglo de `"repositories"` agregar el objeto: ```{"type": "vcs", "url": "git@bitbucket.org:evil-corp/cakephp-awsapigateway.git"}```
+1. Al objeto `"require"`, agregar el plugin: `"ccasanovas/cake-apigateway": "dev-master"`
+2. Al arreglo de `"repositories"` agregar el objeto: ```{"type": "vcs", "url": "git@bitbucket.org:ccasanovas/cake-apigateway.git"}```
 3. correr `composer update`
 
 NOTA: asegurarse de tener los permisos de acceso/deploy correctos en el repositorio.
@@ -74,20 +74,6 @@ Una vez instalado el plugin en el repositorio se puede:
         * Settear los headers `Link` para la paginación, de existir.
         * Asegurarse que todas las viewVars estén serializadas.
     + También se ocupa de limpiar el viewVar `_apiRoute` antes de serializar la respuesta.
-- *protected* **getLinkHeaders**($paging, $controller)
-    + Usado para generar los headers Link.
-    + De ser necesario se puede settear la variable `_apiRoute` desde el controller para sobreescribir la generación automática de URLs desde éste método. Use esto cuando los Link headers generados no concuerdan con la ruta esperada. Por ejemplo:
-        ```php
-        $this->set('_apiRoute', [
-            'prefix'                => 'Api/v1',
-            'controller'            => 'News',
-            'action'                => 'index',
-            '_method'               => 'GET',
-            'plugin'                => false,
-            'owners_association_id' => $this->request->getParam('owners_association_id'),
-            '?'                     => $this->request->getQueryParams(),
-        ]);
-        ```
 
 #### Ccasanovas\ApiGatewaySDK\Error\UnprocessableEntityException
 
@@ -308,7 +294,3 @@ Las configuraciones disponibles son:
     'require_api_id_header' => true,
 ]
 ```
-
-### Testing
-
-//TODO
