@@ -10,7 +10,7 @@
         "lcobucci/jwt": "^3.2",
         "ccasanovas/cakeapigateway": "1.*",
         "ccasanovas/cake-s3upload": "1.*",
-        "muffin/footprint": "^1.2",
+        "muffin/footprint": "^2.0.3",
         "friendsofcake/search": "^3.1",
         "ralouphie/mimey": "^2.0"
     },
