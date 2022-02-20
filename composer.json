@@ -1,0 +1,23 @@
+{
+    "name": "ccasanovas/cake-apigateway",
+    "description": "ApiGatewaySDK plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "4.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ccasanovas\\ApiGatewaySDK\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ccasanovas\\ApiGatewaySDK\\Test\\": "tests",
+            "Ccasanovas\\ApiGatewaySDK\\Test\\Fixture\\": "tests"
+        }
+    }
+}
